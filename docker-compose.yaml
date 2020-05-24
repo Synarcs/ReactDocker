@@ -1,0 +1,32 @@
+version: "3"
+services:
+  web:
+    container_name: "react_app"
+    build:
+      # files and folders present
+      context: .
+      dockerfile: Dockerfile.dev
+    restart: always
+    ports:
+      - "3000:8080"
+    volumes:
+      # the file inside the container
+      - /app/node_modules
+      - .:/app # the file outside the container workdir inside container
+    stdin_open: true
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "run", "test"]
+    stdin_open: true
+  # production:
+  #     container_name: "production_image"
+  #     build:
+  #         context: .
+  #         dockerfile: Dockerfile.prod
+  #     ports:
+  #         - "3000:3000"
