@@ -1,8 +1,0 @@
-FROM node:alpine
-
-WORKDIR /app
-
-RUN npm cache clean --force
-
-
-CMD ["npm","run","prod"]

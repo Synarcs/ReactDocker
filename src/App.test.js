@@ -7,3 +7,7 @@ describe("Examining the syntax of Jest tests", () => {
     console.log("passed");
   });
 });
+
+describe("checker", () => {
+  console.log("hello watch test");
+});

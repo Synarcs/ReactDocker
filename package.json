@@ -8,14 +8,15 @@
     "dev": "webpack-dev-server --mode=development",
     "prod": "webpack --mode=production",
     "start": "webpack-dev-server --host 0.0.0.0 --config ./webpack.config.js --mode development",
-    "test": "jest"
+    "test": "jest --watch App.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -23,6 +24,7 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
+    "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.0.1",
     "react-hot-loader": "^4.12.21",
