@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --mode=development",
     "prod": "webpack --mode=production",
     "start": "webpack-dev-server --host 0.0.0.0 --config ./webpack.config.js --mode development",
-    "test": "jest --watch App.test.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
